@@ -17,6 +17,13 @@ class PersonagemModel {
     required this.inteligencia,
   });
 
+  factory PersonagemModel.fromMap(Map<String, dynamic> json) => PersonagemModel(
+        lvl: json["lvl"],
+        name: json["nome"],
+        classe: json["classe"],
+        forca: json["forca"],
+      );
+
   Map<String, dynamic> toMap() {
     return {
       'name': name,
