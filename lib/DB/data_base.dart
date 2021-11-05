@@ -1,4 +1,4 @@
-class ContactModel {
+class PersonagemModel {
   String name = "";
   int lvl = 0;
   String classe = "";
@@ -7,7 +7,7 @@ class ContactModel {
   String dextresa = "";
   String inteligencia = "";
 
-  ContactModel({
+  PersonagemModel({
     required this.name,
     required this.lvl,
     required this.classe,
