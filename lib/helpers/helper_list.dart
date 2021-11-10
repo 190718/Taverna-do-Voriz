@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 
@@ -24,5 +25,19 @@ class _HelperListState extends State<HelperList> {
     return File('${directory.path}/data.json');
   }
 
-  Future<File> _saveData() async {}
+  Future<File> _saveData() async {
+    String data = json.encode(_toDoList);
+    final file = await _getFile();
+    return file.writeAsString(data);
+  }
+
+  Future<String?> _readData() async {
+    try {
+      final file = await _getFile();
+
+      return file.readAsString();
+    } catch (e) {
+      return null;
+    }
+  }
 }
