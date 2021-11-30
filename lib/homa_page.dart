@@ -39,13 +39,18 @@ class _HomePageState extends State<HomePage> {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
-                return Container(
-                  color: index.isOdd ? Colors.blueGrey : Colors.blueGrey[200],
-                  height: 100.0,
-                  child: Center(
-                    child: Text(
-                      '$index',
-                      textScaleFactor: 5,
+                return Card(
+                  elevation: 5,
+                  child: Container(
+                    color: index.isOdd
+                        ? Colors.blueGrey[400]
+                        : Colors.blueGrey[200],
+                    height: 100.0,
+                    child: Center(
+                      child: Text(
+                        '$index',
+                        textScaleFactor: 5,
+                      ),
                     ),
                   ),
                 );
