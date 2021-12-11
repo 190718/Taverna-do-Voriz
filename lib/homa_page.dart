@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taverna_do_voriz/Status%20persona/status_vida.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,6 +12,22 @@ class _HomePageState extends State<HomePage> {
   final bool _pinned = true;
   final bool _snap = false;
   final bool _floating = false;
+
+  int count = 0;
+
+  void decrament() {
+    setState(() {
+      count--;
+    });
+    print(count);
+  }
+
+  void incrament() {
+    setState(() {
+      count++;
+    });
+    print(count);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +49,7 @@ class _HomePageState extends State<HomePage> {
             child: SizedBox(
               height: 20,
               child: Center(
-                child: Text('Teste'),
+                child: Text('Status'),
               ),
             ),
           ),
@@ -41,6 +58,11 @@ class _HomePageState extends State<HomePage> {
               (BuildContext context, int index) {
                 return Column(
                   children: [
+                    // implementando classe direta.
+                    //
+                    VidaPersona(),
+                    //
+                    // fim classe direta.
                     Card(
                       color: Colors.blueGrey[400],
                       elevation: 5,
@@ -49,14 +71,53 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           const Padding(
                             padding: EdgeInsets.all(12.0),
-                            child: Text('Vida'),
+                            child: Text(
+                              'Vida',
+                              style: TextStyle(
+                                fontSize: 25,
+                                color: Colors.black,
+                              ),
+                            ),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text('+'),
-                              Text('0'),
-                              Text('-'),
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: TextButton(
+                                  onPressed: incrament,
+                                  child: const Text(
+                                    '+',
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  '$count',
+                                  style: const TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: TextButton(
+                                  onPressed: decrament,
+                                  child: const Text(
+                                    '-',
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ],
@@ -65,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 );
               },
-              childCount: 2,
+              childCount: 1,
             ),
           )
         ],
