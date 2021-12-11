@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:taverna_do_voriz/cards/personagem/personagem.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -45,12 +44,14 @@ class _HomePageState extends State<HomePage> {
                     Card(
                       elevation: 5,
                       child: Container(
+                        // Mecher aqui
+
                         color: index.isOdd
                             ? Colors.blueGrey[400]
                             : Colors.blueGrey[200],
                         height: 100.0,
-                        child: Center(
-                          child: Text('$personagem()'),
+                        child: const Center(
+                          child: Text('personagem'),
                         ),
                       ),
                     ),
