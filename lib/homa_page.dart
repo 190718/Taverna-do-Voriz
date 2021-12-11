@@ -42,23 +42,30 @@ class _HomePageState extends State<HomePage> {
                 return Column(
                   children: [
                     Card(
+                      color: Colors.blueGrey[400],
                       elevation: 5,
-                      child: Container(
-                        // Mecher aqui
-
-                        color: index.isOdd
-                            ? Colors.blueGrey[400]
-                            : Colors.blueGrey[200],
-                        height: 100.0,
-                        child: const Center(
-                          child: Text('personagem'),
-                        ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Padding(
+                            padding: EdgeInsets.all(12.0),
+                            child: Text('Vida'),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text('+'),
+                              Text('0'),
+                              Text('-'),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 );
               },
-              childCount: 20,
+              childCount: 2,
             ),
           )
         ],
