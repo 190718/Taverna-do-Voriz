@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taverna_do_voriz/Status%20persona/status_foca.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_vida.dart';
 
 class HomePage extends StatefulWidget {
@@ -58,71 +59,14 @@ class _HomePageState extends State<HomePage> {
               (BuildContext context, int index) {
                 return Column(
                   children: [
-                    // implementando classe direta.
+                    // implementando vida.
                     //
                     VidaPersona(),
                     //
-                    // fim classe direta.
-                    Card(
-                      color: Colors.blueGrey[400],
-                      elevation: 5,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Padding(
-                            padding: EdgeInsets.all(12.0),
-                            child: Text(
-                              'Vida',
-                              style: TextStyle(
-                                fontSize: 25,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: TextButton(
-                                  onPressed: incrament,
-                                  child: const Text(
-                                    '+',
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  '$count',
-                                  style: const TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: TextButton(
-                                  onPressed: decrament,
-                                  child: const Text(
-                                    '-',
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
+                    // fim vida.
+                    // implementando os demais status.
+                    //
+                    ForcaPersona(),
                   ],
                 );
               },
