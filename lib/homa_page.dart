@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_agilidade.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_foca.dart';
+import 'package:taverna_do_voriz/Status%20persona/status_inteligencia.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_vida.dart';
 
 class HomePage extends StatefulWidget {
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
             child: SizedBox(
               height: 20,
               child: Center(
-                child: Text('Status'),
+                child: Text('Status Primarios'),
               ),
             ),
           ),
@@ -69,6 +70,7 @@ class _HomePageState extends State<HomePage> {
                     //
                     ForcaPersona(),
                     const AgilidadePersona(),
+                    const IntPersona(),
                   ],
                 );
               },
