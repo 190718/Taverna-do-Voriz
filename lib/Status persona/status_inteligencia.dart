@@ -46,7 +46,7 @@ class _IntPersonaState extends State<IntPersona> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: TextButton(
                   onPressed: incrament,
                   child: const Text(

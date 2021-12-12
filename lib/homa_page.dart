@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
+          // Iniciando AppBar
           SliverAppBar(
             pinned: _pinned,
             snap: _snap,
@@ -45,10 +46,15 @@ class _HomePageState extends State<HomePage> {
             expandedHeight: 120,
             flexibleSpace: const FlexibleSpaceBar(
               title: Text('Taverna do Voriz'),
+              centerTitle: true,
 
               // background: imagem de algum logo que eu vou fazer,
             ),
           ),
+          //
+          //Fim AppBAr
+          //
+          //Caixa de textoinformativo
           const SliverToBoxAdapter(
             child: SizedBox(
               height: 20,
@@ -57,6 +63,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          //
+          //Fim caixa informação
+          //
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
