@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class VidaPersona extends StatefulWidget {
-  VidaPersona({Key? key}) : super(key: key);
+  const VidaPersona({Key? key}) : super(key: key);
 
   @override
   _VidaPersonaState createState() => _VidaPersonaState();

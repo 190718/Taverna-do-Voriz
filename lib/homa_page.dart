@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_agilidade.dart';
+import 'package:taverna_do_voriz/Status%20persona/status_defesa.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_foca.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_inteligencia.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_vida.dart';
@@ -60,7 +61,7 @@ class _HomePageState extends State<HomePage> {
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
                 return Column(
-                  children: [
+                  children: const [
                     // implementando vida.
                     //
                     VidaPersona(),
@@ -68,9 +69,10 @@ class _HomePageState extends State<HomePage> {
                     // fim vida.
                     // implementando os demais status.
                     //
+                    DefesaPersona(),
                     ForcaPersona(),
-                    const AgilidadePersona(),
-                    const IntPersona(),
+                    AgilidadePersona(),
+                    IntPersona(),
                   ],
                 );
               },

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ForcaPersona extends StatefulWidget {
-  const ForcaPersona({Key? key}) : super(key: key);
+class DefesaPersona extends StatefulWidget {
+  const DefesaPersona({Key? key}) : super(key: key);
 
   @override
-  _ForcaPersonaState createState() => _ForcaPersonaState();
+  _DefesaPersonaState createState() => _DefesaPersonaState();
 }
 
-class _ForcaPersonaState extends State<ForcaPersona> {
+class _DefesaPersonaState extends State<DefesaPersona> {
   int count = 0;
 
   void decrament() {
@@ -35,7 +35,7 @@ class _ForcaPersonaState extends State<ForcaPersona> {
           const Padding(
             padding: EdgeInsets.all(12.0),
             child: Text(
-              'Força',
+              'Defesa',
               style: TextStyle(
                 fontSize: 25,
                 color: Colors.black,
