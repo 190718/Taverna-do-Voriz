@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taverna_do_voriz/Status%20persona/status_agilidade.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_foca.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_vida.dart';
 
@@ -67,6 +68,7 @@ class _HomePageState extends State<HomePage> {
                     // implementando os demais status.
                     //
                     ForcaPersona(),
+                    const AgilidadePersona(),
                   ],
                 );
               },
