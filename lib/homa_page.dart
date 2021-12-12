@@ -3,6 +3,7 @@ import 'package:taverna_do_voriz/Status%20persona/status_agilidade.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_defesa.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_foca.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_inteligencia.dart';
+import 'package:taverna_do_voriz/Status%20persona/status_sanidade.dart';
 import 'package:taverna_do_voriz/Status%20persona/status_vida.dart';
 
 class HomePage extends StatefulWidget {
@@ -82,6 +83,7 @@ class _HomePageState extends State<HomePage> {
                     ForcaPersona(),
                     AgilidadePersona(),
                     IntPersona(),
+                    SanidadePerson(),
                   ],
                 );
               },
