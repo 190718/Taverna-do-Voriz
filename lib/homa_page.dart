@@ -50,6 +50,7 @@ class _HomePageState extends State<HomePage> {
               centerTitle: true,
 
               // background: imagem de algum logo que eu vou fazer,
+              //
             ),
           ),
           //
@@ -58,7 +59,7 @@ class _HomePageState extends State<HomePage> {
           //Caixa de textoinformativo
           const SliverToBoxAdapter(
             child: SizedBox(
-              height: 20,
+              height: 40,
               child: Center(
                 child: Text('Status Primarios'),
               ),
@@ -89,7 +90,32 @@ class _HomePageState extends State<HomePage> {
               },
               childCount: 1,
             ),
-          )
+          ),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 40,
+              child: Center(
+                child: Text('Status Secundarios'),
+              ),
+            ),
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                return Column(
+                  children: [
+                    Card(
+                      child: Container(
+                        height: 200,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                );
+              },
+              childCount: 1,
+            ),
+          ),
         ],
       ),
     );

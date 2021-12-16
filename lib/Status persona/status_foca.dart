@@ -46,7 +46,7 @@ class _ForcaPersonaState extends State<ForcaPersona> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(12.0),
                 child: TextButton(
                   onPressed: incrament,
                   child: const Text(
