@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taverna_do_voriz/paginas/status_principal/info_principal.dart';
+import 'package:taverna_do_voriz/paginas/status_secundarios/info_secundario.dart';
 
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
@@ -45,10 +46,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
             child: HomePage(),
           ),
           Center(
-            child: Text("It's rainy here"),
+            child: StatusSecundario(),
           ),
           Center(
-            child: Text("It's sunny here"),
+            child: Icon(Icons.lock_clock),
           ),
         ],
       ),
