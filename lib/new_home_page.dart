@@ -1,4 +1,7 @@
+import 'dart:io';
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:taverna_do_voriz/paginas/status_principal/info_principal.dart';
 import 'package:taverna_do_voriz/paginas/status_secundarios/info_secundario.dart';
 
@@ -12,6 +15,8 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget>
     with TickerProviderStateMixin {
   late TabController _tabController;
+
+  List _toDoList = [];
 
   @override
   void initState() {
@@ -55,4 +60,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
       ),
     );
   }
+
+  Future<File> _getFile() async {
+    final directory = await getApplicationDocumentsDirectory();
+    return File("${directory.path}/data.json");
+  }
+
+  Future<File> _saveData() async {}
 }
