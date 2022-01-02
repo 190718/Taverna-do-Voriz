@@ -34,13 +34,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
           controller: _tabController,
           tabs: const <Widget>[
             Tab(
-              icon: Icon(Icons.cloud_outlined),
+              icon: Icon(Icons.stream_outlined),
             ),
             Tab(
-              icon: Icon(Icons.beach_access_sharp),
+              icon: Icon(Icons.scatter_plot),
             ),
             Tab(
-              icon: Icon(Icons.brightness_5_sharp),
+              icon: Icon(Icons.shopping_bag_rounded),
             ),
           ],
         ),
