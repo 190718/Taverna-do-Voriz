@@ -52,7 +52,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
             child: HomePage(),
           ),
           Center(
-            child: StatusSecundario(),
+            child: Icon(Icons.lock_clock), //StatusSecundario(),
           ),
           Center(
             child: Icon(Icons.lock_clock),
